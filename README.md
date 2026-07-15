@@ -493,8 +493,7 @@ sr_app_temp/outputs
 # Built With
 
 * FFmpeg
-* Auto-Editor<img width="595" height="407" alt="windows" src="https://github.com/user-attachments/assets/67912548-1a2b-42de-bd8a-b298200fbe3c" />
-
+* Auto-Editor
 * Gradio
 * Tkinter
 * Pillow
@@ -504,9 +503,14 @@ sr_app_temp/outputs
 
 # License
 
-This project is open source.
+This project is licensed under the **Apache License 2.0**.
 
-Feel free to use it, improve it, and contribute.
+You are free to:
+
+- ✅ Use this project for personal or commercial purposes
+- ✅ Modify the source code
+- ✅ Distribute your own versions
+- ✅ Include it in your own projects
 
 ---
 
