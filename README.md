@@ -1,104 +1,307 @@
 # 🔇 silence.remove
 
-A simple, free, open-source tool that automatically removes silence from your videos — runs entirely on your own computer, no upload, no watermark, no subscription.
+A free, open-source tool that automatically removes silence from videos.
 
+No subscriptions. No watermarks. No uploads. Your videos never leave your computer.
 
-<img width="713" height="383" alt="app" src="https://github.com/user-attachments/assets/a934b672-0eab-492a-8986-0652f071b023" />
+Supports both:
+
+* 🪟 **Windows Desktop App (Recommended)**
+* 🌐 **Gradio Web App**
 
 
 ---
 
-## Why this exists
+## 🪟 Windows Desktop App
 
-Most "remove silence from video" tools online are paid, subscription-based, or watermark your export unless you pay. This project exists so small YouTubers, podcasters, and content creators can trim the dead air out of their videos for free, using open-source tools (`ffmpeg` and `auto-editor`) under the hood — nothing premium, nothing locked behind a paywall.
+<p align="center">
+<img width="595" alt="Windows App" src="https://github.com/user-attachments/assets/edfb2c76-706e-48d3-aa28-71913e603ec1">
+</p>
 
-If you're a small creator who just wants a straightforward "cut the silence" button without paying for editing software, this is for you.
-
----
-
-## What it does
-
-- Detects silent gaps in your video's audio and cuts them out
-- Keeps a small configurable pause between speech segments, so cuts don't feel jarring
-- Two engines to choose from:
-  - **ffmpeg** — built into this app, fast, good for most talking-head/podcast style videos
-  - **auto-editor** — a more advanced open-source silence/motion-based editor
-- Works on a single video, or a whole folder of videos at once (batch mode)
-- Shows you a before/after waveform and stats (original length, final length, % removed, etc.)
-- Everything happens locally on your machine — your video is never uploaded anywhere
+<p align="center">
+<i>Native Windows desktop application (Tkinter)</i>
+</p>
 
 ---
 
-## Requirements
+## 🌐 Gradio Web App
 
-- **Windows, macOS, or Linux**
-- **Python 3.10** (this project was built and tested on Python 3.10.0)
-- **ffmpeg** (audio/video processing engine)
-- Python packages: `gradio==5.50.0`, `auto-editor==29.3.1`, `pydub`
+<p align="center">
+<img width="713" alt="Gradio App" src="https://github.com/user-attachments/assets/a934b672-0eab-492a-8986-0652f071b023">
+</p>
 
----
-
-## 🪟 Windows — Easy Automatic Install (recommended)
-
-If you're on Windows, you don't need to install anything by hand. Just run the installer script.
-
-### Steps
-
-1. Download/clone this project folder to your computer.
-2. Make sure you have **Python 3.10** installed:
-   - Get it here: https://www.python.org/downloads/release/python-3100/
-   - ⚠️ During installation, tick the box **"Add Python to PATH"** — this matters, don't skip it.
-3. Inside the project folder, double-click **`install.bat`**.
-
-That's it. The script will automatically:
-- Create a private virtual environment (`venv`) just for this app, so it won't mess with anything else on your system
-- Install `gradio`, `auto-editor`, and `pydub` into that environment
-- Check if `ffmpeg` is installed — if not, it will try to install it for you (via `winget`, or by downloading it directly if `winget` isn't available)
-- Launch the app automatically once setup is done
-
-After the first install, to run the app again later, just double-click **`run.bat`** — it's faster since it skips the setup steps.
-
-> **Note:** If `ffmpeg` gets installed via `winget` and the app still can't find it on the very first run, close the window, open a **new** terminal/command prompt, and run `run.bat` again. Windows sometimes needs a fresh terminal to notice the updated PATH.
+<p align="center">
+<i>Browser-based interface (Gradio)</i>
+</p>
 
 ---
 
-## 🐧🍎 macOS / Linux — Manual Install
+# Why I made this
 
-The automatic `.bat` installer is Windows-only. On Mac/Linux, set it up manually — it only takes a few commands.
+Most "Remove Silence" tools are locked behind subscriptions, limit exports, or add watermarks unless you pay.
 
-### 1. Install Python 3.10
+I wanted something anyone could use completely free.
 
-- **macOS**: `brew install python@3.10`
-- **Ubuntu/Debian**: `sudo apt install python3.10 python3.10-venv`
+This project is built on top of the amazing open-source projects **FFmpeg** and **Auto-Editor** to give creators a simple one-click solution.
 
-### 2. Install ffmpeg
+Perfect for:
 
-- **macOS**: `brew install ffmpeg`
-- **Ubuntu/Debian**: `sudo apt install ffmpeg`
-- **Other Linux**: use your distro's package manager, or download a static build from https://ffmpeg.org/download.html
+* YouTubers
+* Podcasters
+* Streamers
+* Teachers
+* Students
+* Anyone editing talking videos
 
-Check it worked:
+Everything runs **100% locally**.
+
+Your videos are **never uploaded anywhere**.
+
+---
+
+# Features
+
+✅ Remove silence automatically
+
+✅ Desktop application (Windows)
+
+✅ Gradio Web UI
+
+✅ Batch process entire folders
+
+✅ Before / After statistics
+
+✅ Before / After waveform
+
+✅ Adjustable pause between speech
+
+✅ NVIDIA GPU (NVENC) support
+
+✅ CPU fallback
+
+✅ Completely offline
+
+---
+
+# Supported Formats
+
+```
+.mp4
+.mov
+.mkv
+.avi
+.webm
+.m4v
+```
+
+---
+
+# Requirements
+
+* Python 3.10
+* FFmpeg
+* Windows / Linux / macOS
+
+Python packages
+
+```
+gradio
+pillow
+pydub
+auto-editor
+```
+
+---
+
+# 🪟 Windows Installation (Recommended)
+
+If you're on Windows, this is the easiest method.
+
+You only need to do this once.
+
+---
+
+## Step 1 — Download the project
+
+You have **two options**.
+
+### Option A — Download ZIP (Recommended for beginners)
+
+1. Open this GitHub repository.
+2. Click the green **Code** button.
+3. Click **Download ZIP**.
+4. Wait for the download to finish.
+5. Right-click the ZIP file.
+6. Click **Extract All...**
+7. Open the extracted folder.
+
+That's it.
+
+---
+
+### Option B — Clone with Git
+
+If you already have Git installed:
+
+```bash
+git clone https://github.com/NeuralFalconYT/Remove-Silence-From-Video.git
+```
+
+Then:
+
+```bash
+cd Remove-Silence-From-Video
+```
+
+---
+
+## Step 2 — Install Python
+
+Download Python 3.10
+
+https://www.python.org/downloads/release/python-3100/
+
+During installation:
+
+✅ Check
+
+```
+Add Python to PATH
+```
+
+before clicking **Install**.
+
+This is very important.
+
+---
+
+## Step 3 — Run the installer
+
+Inside the project folder:
+
+Double-click
+
+```
+install.bat
+```
+
+The installer will automatically:
+
+* Create a private virtual environment
+* Install all required Python packages
+* Install FFmpeg if needed
+* Launch the application
+
+No manual setup required.
+
+---
+
+## Step 4 — Run the app later
+
+After installation is complete,
+
+simply double-click
+
+```
+run.bat
+```
+
+Choose:
+
+```
+1. Windows Desktop App (Recommended)
+2. Gradio Web App
+```
+
+If you simply press **Enter**, the Desktop App launches automatically.
+
+---
+
+# 🍎 Linux / macOS Installation
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/NeuralFalconYT/Remove-Silence-From-Video.git
+
+cd Remove-Silence-From-Video
+```
+
+Or download the ZIP from GitHub and extract it.
+
+---
+
+## 2. Install Python 3.10
+
+macOS
+
+```bash
+brew install python@3.10
+```
+
+Ubuntu
+
+```bash
+sudo apt install python3.10 python3.10-venv
+```
+
+---
+
+## 3. Install FFmpeg
+
+macOS
+
+```bash
+brew install ffmpeg
+```
+
+Ubuntu
+
+```bash
+sudo apt install ffmpeg
+```
+
+Verify installation
+
 ```bash
 ffmpeg -version
 ```
 
-### 3. Set up the project
+---
+
+## 4. Create a virtual environment
 
 ```bash
-# go into the project folder
-cd silence-remove
-
-# create a virtual environment
 python3.10 -m venv venv
+```
 
-# activate it
+Activate it
+
+macOS/Linux
+
+```bash
 source venv/bin/activate
+```
 
-# install the dependencies
+---
+
+## 5. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the app
+---
+
+## 6. Run
+
+Desktop version
+
+```bash
+python windows.py
+```
+
+Gradio version
 
 ```bash
 python app.py
@@ -106,45 +309,215 @@ python app.py
 
 ---
 
-## How to install ffmpeg manually (any OS, if the auto-installer can't)
+# How to Use
 
-If the automatic install ever fails, here's how to do it by hand:
+## Step 1
 
-1. Go to https://ffmpeg.org/download.html
-2. Download a build for your OS (on Windows, the [gyan.dev builds](https://www.gyan.dev/ffmpeg/builds/) are a popular choice — grab the "essentials" build)
-3. Unzip it somewhere permanent, e.g. `C:\ffmpeg`
-4. Add the `bin` folder inside it (e.g. `C:\ffmpeg\bin`) to your system PATH:
-   - Windows: Start Menu → search "Edit the system environment variables" → Environment Variables → edit `Path` → add the folder → OK
-   - macOS/Linux: add `export PATH="$PATH:/path/to/ffmpeg/bin"` to your `~/.zshrc` or `~/.bashrc`
-5. Open a **new** terminal and check it worked: `ffmpeg -version`
+Launch the application.
 
----
+Windows:
 
-## How to use the app
+```
+run.bat
+```
 
-1. Start the app (`run.bat` on Windows, or `python app.py` on Mac/Linux). It opens a local web page in your browser (usually `http://127.0.0.1:7860`).
-2. Add your video(s):
-   - Either **upload** one or more video files directly, or
-   - **Paste a file or folder path** (works with both Windows-style `D:\Videos\clip.mp4` and Linux-style `/home/user/clip.mp4` paths). Pasting a folder path processes every supported video inside it in one batch.
-3. Pick your **engine**: `ffmpeg` (default, fast) or `auto-editor`.
-4. Adjust the **minimum pause duration** slider — this is how much silence is kept between speech segments after trimming. Lower = tighter cuts, higher = more natural breathing room. Default `0.2s` works well for most talking videos.
-5. Click **▶ Remove silence**.
-6. When it's done, you'll see stats (original length, new length, % removed, time taken) plus a link to download the trimmed video, or the folder it was saved into if you processed a batch.
+Linux/macOS
 
-Supported video formats: `.mp4 .mov .mkv .avi .webm .m4v`
+```
+python windows.py
+```
+
+or
+
+```
+python app.py
+```
 
 ---
 
-## Notes
+## Step 2
 
-- All processing happens locally — nothing is uploaded to any server.
-- If you have an NVIDIA GPU with NVENC support, the app will automatically detect and use it for faster encoding. Otherwise it falls back to CPU encoding (`libx264`).
-- Temporary work files are stored in a `sr_app_temp` folder next to `app.py` and are cleaned up automatically after each run; final outputs stay in `sr_app_temp/outputs`.
+Select one or more videos.
+
+Or choose an entire folder.
 
 ---
 
-## Credits
+## Step 3
 
-Built by [@NeuralFalcon](https://github.com/NeuralFalconYT) — made as a free, open-source alternative to paid silence-removal tools, for small creators who just need a simple tool that works.
+Choose an engine.
 
-If this saved you some money or time, a ⭐ on the repo is appreciated.
+### FFmpeg
+
+* Fast
+* Recommended
+* Great for most videos
+
+### Auto-Editor
+
+* More advanced
+* Better for difficult videos
+* Slightly slower
+
+---
+
+## Step 4
+
+Adjust the pause duration.
+
+Default:
+
+```
+0.20 seconds
+```
+
+Smaller value
+
+```
+Faster cuts
+```
+
+Larger value
+
+```
+More natural pauses
+```
+
+---
+
+## Step 5
+
+Click
+
+```
+Remove Silence
+```
+
+Wait for processing.
+
+---
+
+## Step 6
+
+Done!
+
+You'll see:
+
+* Original duration
+* New duration
+* Time removed
+* Percentage removed
+* Processing time
+* Output folder
+
+---
+
+# FFmpeg Manual Installation
+
+If automatic installation fails:
+
+Download
+
+https://ffmpeg.org/download.html
+
+Windows users can use
+
+https://www.gyan.dev/ffmpeg/builds/
+
+Download
+
+```
+ffmpeg-release-essentials.zip
+```
+
+Extract it somewhere permanent
+
+Example
+
+```
+C:\ffmpeg
+```
+
+Add
+
+```
+C:\ffmpeg\bin
+```
+
+to your Windows PATH.
+
+Restart Command Prompt.
+
+Verify
+
+```bash
+ffmpeg -version
+```
+
+---
+
+# NVIDIA GPU Support
+
+If your PC supports NVIDIA NVENC,
+
+the application automatically uses GPU encoding.
+
+Otherwise,
+
+it automatically falls back to CPU encoding.
+
+No configuration required.
+
+---
+
+# Temporary Files
+
+Temporary processing files are stored in
+
+```
+sr_app_temp
+```
+
+They are automatically deleted after processing.
+
+Finished videos remain inside
+
+```
+sr_app_temp/outputs
+```
+
+(or your chosen output folder).
+
+---
+
+# Built With
+
+* FFmpeg
+* Auto-Editor<img width="595" height="407" alt="windows" src="https://github.com/user-attachments/assets/67912548-1a2b-42de-bd8a-b298200fbe3c" />
+
+* Gradio
+* Tkinter
+* Pillow
+* Pydub
+
+---
+
+# License
+
+This project is open source.
+
+Feel free to use it, improve it, and contribute.
+
+---
+
+# Credits
+
+Created by
+
+**NeuralFalcon**
+
+GitHub:
+
+https://github.com/NeuralFalconYT
+
+If this project helped you save time, consider giving the repository a ⭐.
