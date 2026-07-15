@@ -8,7 +8,7 @@ echo ================================================
 echo.
 echo This will:
 echo   1. Create a private Python virtual environment (venv)
-echo   2. Install gradio, auto-editor, pydub inside it
+echo   2. Install gradio, auto-editor, pydub,Pillow inside it
 echo   3. Install ffmpeg if it is missing
 echo   4. Launch the app
 echo.
@@ -136,6 +136,6 @@ echo   Setup complete. Launching silence.remove ...
 echo ================================================
 echo.
 set "PATH=%cd%\ffmpeg_bin;%PATH%"
-python app.py
+python windows.py
 
 pause
