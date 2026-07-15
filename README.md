@@ -2,6 +2,10 @@
 
 A simple, free, open-source tool that automatically removes silence from your videos — runs entirely on your own computer, no upload, no watermark, no subscription.
 
+
+<img width="713" height="383" alt="app" src="https://github.com/user-attachments/assets/a934b672-0eab-492a-8986-0652f071b023" />
+
+
 ---
 
 ## Why this exists
